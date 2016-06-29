@@ -1,0 +1,43 @@
+@(room: models.entities.Room, messages: Seq[models.entities.Message])
+
+
+@main("Room"){
+    <h1>Room @room.id: @room.room</h1>
+
+    <div class="log">
+        <ul id="messages">
+            @for(m <- messages){
+                <li>@m.date: @m.message</li>
+            }
+        </ul>
+    </div>
+
+    <form action="#" onSubmit="onSubmit();">
+        <input type="hidden" name="roomId" id="roomId" value="@room.id" />
+        <input type="text" class="form-control" name="message" id="message" />
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <script>
+        var ws = new WebSocket("ws://localhost:9000/socket");
+
+        ws.onmessage = function(e){
+            var m = JSON.parse(e.data);
+            $('#messages').append('<li>'+(new Date(m.date))+': '+m.message+'</li>');
+        }
+
+        function onSubmit() {
+            var params = {
+                roomId: parseInt($('#roomId').val()),
+                message: $('#message').val()
+            }
+            console.log(params)
+            ws.send(JSON.stringify(params));
+            $('#message').val('')
+            return false;
+        }
+
+
+    </script>
+}
+

@@ -1,0 +1,25 @@
+@(rooms: List[models.entities.Room], form: Form[models.entities.Room])(implicit msg: play.api.i18n.Messages)
+
+
+@main("Las Habitaciones") {
+    <h1>ROOMS</h1>
+    <table class="table table-striped">
+        <thead>
+            <th>Nombre</th>
+        </thead>
+        <tbody>
+            @for(room <- rooms) {
+                <tr>
+                    <td>@room.room</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h2>Crear Room</h2>
+    @helper.form(action = routes.ChatController.createRoom()){
+        <input type="hidden" value="0" name="id" />
+        @helper.inputText(form("room"))
+        <button type="submit" class="btn btn-primary">Crear!</button>
+    }
+}
