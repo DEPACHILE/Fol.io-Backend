@@ -1,7 +1,2 @@
-[warn] C:\Users\Nicolas\Documents\ScalaRamo\chat\app\models\daos\BaseDAO.scala:160: method current in object Play is deprecated: This is a static reference to application, use DI instead
-[warn]   protected lazy val dbConfig: DatabaseConfig[JdbcProfile] = DatabaseConfigProvider.get[JdbcProfile](Play.current)
-[warn]                                                                                                           ^
-[warn] C:\Users\Nicolas\Documents\ScalaRamo\chat\app\models\persistence\SlickTables.scala:15: method current in object Play is deprecated: This is a static reference to application, use DI instead
-[warn]   protected lazy val dbConfig = DatabaseConfigProvider.get[JdbcProfile](Play.current)
-[warn]                                                                              ^
-[warn] two warnings found
+[warn] there were two feature warnings; re-run with -feature for details
+[warn] one warning found

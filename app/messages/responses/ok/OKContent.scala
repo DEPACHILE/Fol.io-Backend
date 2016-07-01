@@ -15,7 +15,7 @@ object OKContent {
     override def writes(o: OKContent): JsValue = {
       Json.toJson(
         o.body.map { t =>
-          Map("entity" -> t.toJson.toString())
+          Map("entity" -> t.toJson)
         }
       )
     }

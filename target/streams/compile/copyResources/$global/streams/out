@@ -1,7 +1,7 @@
 [debug] Copy resource mappings: 
-[debug] 	(C:\Users\Nicolas\Documents\ScalaRamo\chat\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\chat\target\scala-2.11\classes\application.conf)
-[debug] 	(C:\Users\Nicolas\Documents\ScalaRamo\chat\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\chat\target\scala-2.11\classes\evolutions)
-[debug] 	(C:\Users\Nicolas\Documents\ScalaRamo\chat\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\chat\target\scala-2.11\classes\logback.xml)
-[debug] 	(C:\Users\Nicolas\Documents\ScalaRamo\chat\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\chat\target\scala-2.11\classes\routes)
-[debug] 	(C:\Users\Nicolas\Documents\ScalaRamo\chat\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\chat\target\scala-2.11\classes\evolutions\default)
-[debug] 	(C:\Users\Nicolas\Documents\ScalaRamo\chat\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\chat\target\scala-2.11\classes\evolutions\default\1.sql)
+[debug] 	(C:\Users\Nicolas\Documents\Fol.io-Backend\conf\application.conf,C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\application.conf)
+[debug] 	(C:\Users\Nicolas\Documents\Fol.io-Backend\conf\evolutions,C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\evolutions)
+[debug] 	(C:\Users\Nicolas\Documents\Fol.io-Backend\conf\logback.xml,C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\logback.xml)
+[debug] 	(C:\Users\Nicolas\Documents\Fol.io-Backend\conf\routes,C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\routes)
+[debug] 	(C:\Users\Nicolas\Documents\Fol.io-Backend\conf\evolutions\default,C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\evolutions\default)
+[debug] 	(C:\Users\Nicolas\Documents\Fol.io-Backend\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\evolutions\default\1.sql)

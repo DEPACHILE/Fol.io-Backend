@@ -10,6 +10,7 @@ import models.daos.{UserDAO, EventDAO, ParticipationDAO}
 import models.entities._
 import play.api.data.Forms._
 import play.api.data._
+import play.api.libs.json.Json
 
 import play.api.libs.json.{Json, Writes, JsValue}
 
@@ -42,10 +43,8 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
 
   def sendVote(v: Vote) = {
     val senderId = v.senderId
-    (system.actorSelection(s"/user/actorUsers/$senderId") ? v).mapTo[String].map { message =>
-      val json = Json.toJson(message)
-      println(s"json: $json")
-      Ok(json)
+    (system.actorSelection(s"/user/actorUsers/$senderId") ? v).mapTo[JsValue].map { message =>
+      Ok(message)
     }
   }
 

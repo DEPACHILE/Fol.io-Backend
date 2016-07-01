@@ -4,13 +4,16 @@ import messages.MessagesActors
 import MessagesActors._
 import akka.actor._
 import akka.event.Logging.Error
+import messages.responses.error.{ErrorContent, ErrorResponse}
 import messages.responses.ok.{OKResponse, OKContent}
 import models.daos._
 import play.api.libs.json.{Json, JsValue}
 import akka.pattern.ask
+import scala.concurrent.{Awaitable, Await, Future}
 import scala.concurrent.duration._
 import akka.util.Timeout
 import scala.util.{Success,Failure}
+import models.entities.{UserTest, Participation}
 
 object ActorDBUsers{
   //def props = Props(classOf[ActorDBUsers], null, null)
@@ -22,6 +25,7 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
   import context._
   import Actor._
 
+  println(self.path)
   //Creacion de actores secundarios
   val loop={
     var n: Int=0
@@ -44,30 +48,67 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
     println("rooms")
     userDAO.byTuiId(tuiId).map { rooms =>
       println("rooms2")
-      if (rooms.isDefined)      sender ! Json.toJson(OKResponse(OKContent(Seq(rooms.get)))).toString()
-      else sender ! Json.toJson(OKResponse(OKContent(Seq()))).toString()
+      if (rooms.isDefined)      sender ! Json.toJson(OKResponse(OKContent(Seq(rooms.get))))
+      else sender ! Json.toJson(OKResponse(OKContent(Seq())))
     }
   }
-  println(self.path)
+  def userExists(v: VoteWithFolio) ={
+    userDAO.byTuiId(v.tuiId).flatMap {
+      case Some(va) => Future(Option(va))
+      case _ =>  Future(None)
+    }
 
-  /*def voteInDB(tuiId: Long) ={
-    println("hehe")
 
-  }*/
+  }
+
+  // falta arreglar weas aca
+
+  def vote(v: VoteWithFolio, sender: ActorRef, user: UserTest)={
+    println("voting")
+    participationDAO.byTuiId(v.tuiId).map {
+
+    case Some(va) =>  {
+      println("user voto")
+      sender ! ErrorResponse(ErrorContent("Persona ya voto"))
+    }
+    case _ => {
+      val s = user.toString
+      println(s"user no ha votado $s")
+      val participation = Participation(0,user.name,user.lastName,user.rut,0,0,user.career,"a","a",user.tuiId,v.folio,true)
+      participationDAO.insert(participation)
+        /*.map{
+        case _ =>sender ! Json.toJson("ok")
+      }*/
+      sender ! Json.toJson("ok")
+    }
+  }
+  }
+
+  def voteUser(v: VoteWithFolio)={
+    val userContainer = Await.result(userExists(v), 1000 millis)
+    if(!userContainer.isEmpty){
+      println("user Exists!")
+      val newSender = sender()
+      Await.result(vote(v,newSender,userContainer.get), 1000 millis)
+    }
+    else{
+      sender ! ErrorResponse(ErrorContent("Usuario no existe"))
+    }
+
+  }
 
   def receive = {
 
-    case v: Vote => {
-      /*if(voteInDB(v.tuiId)){
-          println("jalpbd")
-          sender ! "sex"
-      }else{
-        println("jalpbd2")
-        sender ! "Error in votacion"
-      }*/
+    case v: VoteWithFolio => {
+      println("voting")
+      voteUser(v)
+
+    }
+    case v: VoteWithoutFolio => {
       println("inside")
       val newSender = sender()
       getUser(newSender,v.tuiId)
+
     }
     case _ => {
       println(self.path)

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/Nicolas/Documents/ScalaRamo/chat/conf/routes
-// @DATE:Wed Jun 29 02:06:00 CLT 2016
+// @SOURCE:C:/Users/Nicolas/Documents/Fol.io-Backend/conf/routes
+// @DATE:Wed Jun 29 16:46:46 CLT 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
