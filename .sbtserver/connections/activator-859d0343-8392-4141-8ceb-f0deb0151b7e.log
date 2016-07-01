@@ -7515,3 +7515,19 @@ Sending msg to client activator-859d0343-8392-4141-8ceb-f0deb0151b7e: Background
 Sending msg to client activator-859d0343-8392-4141-8ceb-f0deb0151b7e: BackgroundJobLogEvent(4,LogMessage(info,voting))
 Sending msg to client activator-859d0343-8392-4141-8ceb-f0deb0151b7e: BackgroundJobLogEvent(4,LogMessage(info,user no ha votado UserTest(343,D999B84E,name,lastname,18121722-7,Computacion)))
 Sending msg to client activator-859d0343-8392-4141-8ceb-f0deb0151b7e: BackgroundJobLogEvent(4,LogMessage(info,{"code":200,"content":[{"entity":{"id":0,"name":"name","lastName":"lastname","rut":"18121722-7","participated":1}}]}))
+Got request: UnlistenToEvents()
+Reading next message from client.
+Sending msg to client activator-859d0343-8392-4141-8ceb-f0deb0151b7e: (35,ReceivedResponse())
+Got request: UnlistenToValue(AttributeKey[scala.collection.Seq[java.lang.String]]("discoveredMainClasses") in Scope(Build: file:/C:/Users/Nicolas/Documents/Fol.io-Backend/, , Project: ProjectReference(file:/C:/Users/Nicolas/Documents/Fol.io-Backend/,root), Config: compile))
+Reading next message from client.
+Got request: UnlistenToValue(AttributeKey[scala.Option[java.lang.String]]("mainClass") in Scope(Build: file:/C:/Users/Nicolas/Documents/Fol.io-Backend/, , Project: ProjectReference(file:/C:/Users/Nicolas/Documents/Fol.io-Backend/,root), Config: compile))
+Reading next message from client.
+Got request: UnlistenToBuildChange()
+Reading next message from client.
+Client activator-859d0343-8392-4141-8ceb-f0deb0151b7e closed, java.net.SocketException: Software caused connection abort: recv failed, shutting down
+Stopping client.
+Client activator-859d0343-8392-4141-8ceb-f0deb0151b7e thread exiting.
+Dropping message (36,ReceivedResponse()) to dead client activator-859d0343-8392-4141-8ceb-f0deb0151b7e
+Dropping message (37,ReceivedResponse()) to dead client activator-859d0343-8392-4141-8ceb-f0deb0151b7e
+Dropping message (38,ReceivedResponse()) to dead client activator-859d0343-8392-4141-8ceb-f0deb0151b7e
+Dropping message (0,ReceivedResponse()) to dead client activator-859d0343-8392-4141-8ceb-f0deb0151b7e
