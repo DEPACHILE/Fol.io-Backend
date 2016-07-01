@@ -62,6 +62,11 @@ class ParticipationDAO @Inject()(protected val dbConfigProvider: DatabaseConfigP
   def insert(obj: Participation): Future[Long] = {
     db.run(tableQ returning tableQ.map(_.id) += obj)
   }
+  def add(obj: Participation): Future[String] = {
+    dbConfig.db.run(tableQ returning tableQ.map(_.id) += obj).map(res => "User successfully added").recover {
+      case ex: Exception => ex.getCause.getMessage
+    }
+  }
 
 
   def byId(id: Long): Future[Option[Participation]] = {

@@ -33,7 +33,7 @@ object Participation{
 
 case class Participation(id: Long, name: String, lastName: String, rut: String,
                          eventId: Long, dispId: Long, career: String,
-                         date: String, sender: String,tuiId: String, folio: Long, participated: Boolean) extends BaseEntity{
+                         date: String, sender: String,tuiId: String, folio: Long, participated: Long) extends BaseEntity{
   override def toJson=
   Json.toJson(this)
 }

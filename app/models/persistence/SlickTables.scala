@@ -44,7 +44,7 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
     def date= column[String]("date")
     def tuiId = column[String]("tui_id")
     def folio = column[Long]("folio")
-    def participated = column[Boolean]("participated")
+    def participated = column[Long]("participated")
 
     def * = (id, name, lastName, rut,eventId,dispId,career,sender,date,tuiId,folio,participated) <> ((Participation.apply _).tupled, Participation.unapply)
   }

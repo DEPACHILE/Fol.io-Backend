@@ -69,17 +69,16 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
 
     case Some(va) =>  {
       println("user voto")
-      sender ! ErrorResponse(ErrorContent("Persona ya voto"))
+      sender ! Json.toJson(ErrorResponse(ErrorContent("Persona ya voto")))
     }
     case _ => {
       val s = user.toString
       println(s"user no ha votado $s")
-      val participation = Participation(0,user.name,user.lastName,user.rut,0,0,user.career,"a","a",user.tuiId,v.folio,true)
+      val participation = Participation(0,user.name,user.lastName,user.rut,1,1,user.career,"a","a",user.tuiId,v.folio,1)
       participationDAO.insert(participation)
-        /*.map{
-        case _ =>sender ! Json.toJson("ok")
-      }*/
-      sender ! Json.toJson("ok")
+        .map{
+        case _=>sender ! Json.toJson(OKResponse(OKContent(Seq(participation))))
+      }
     }
   }
   }

@@ -6,6 +6,7 @@ import messages.MessagesActors
 import MessagesActors._
 import akka.actor._
 import akka.event.Logging.Error
+import messages.responses.error.{ErrorContent, ErrorResponse}
 import messages.responses.ok.{OKContent, OKResponse}
 import models.daos.{EventDAO, ParticipationDAO}
 import org.omg.CosNaming.NamingContextPackage.NotFound
@@ -29,7 +30,7 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
   import Actor._
 
 
-  implicit val timeout: Timeout = 20.seconds
+  implicit val timeout: Timeout = 200.seconds
 
   println(self.path)
 
@@ -54,12 +55,12 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
         }
 
       }else{
-        sender ! "User already voted"
+        sender ! Json.toJson(ErrorResponse(ErrorContent("Persona ya voto")))
       }
     }
     case _ => {
       println(self.path)
-      sender ! "Unexpected Error"
+      sender ! Json.toJson(ErrorResponse(ErrorContent("Unexpected error")))
 
     }
   }

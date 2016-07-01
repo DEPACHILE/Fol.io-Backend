@@ -33,7 +33,7 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
   //Implicits
 
 
-  implicit val timeout: Timeout = 10.seconds
+  implicit val timeout: Timeout = 100.seconds
 
 
   //Actor database
