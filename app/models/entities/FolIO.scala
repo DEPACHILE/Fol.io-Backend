@@ -43,14 +43,30 @@ object UserTest{
   implicit val entityWrite: Writes[UserTest]= new Writes[UserTest] {
     override def writes(o:UserTest): JsValue  = Json.obj(
       "id" ->  o.id,
-      "name" -> o.name,
-      "lastName" -> o.lastName,
+      "name" -> o.name.split('/')(0),
+    "lastname" -> o.name.split('/')(1),
+      "rut" -> o.rut,
+      "career" -> o.career
+    )
+  }
+}
+
+case class UserTest(id: Long, name: String, rut: String, career: String) extends BaseEntity{
+  override def toJson=
+    Json.toJson(this)
+}
+
+object TuiRut{
+  implicit val entityWrite: Writes[TuiRut]= new Writes[TuiRut] {
+    override def writes(o:TuiRut): JsValue  = Json.obj(
+      "id" ->  o.id,
+      "tuiId" -> o.tuiId,
       "rut" -> o.rut
     )
   }
 }
 
-case class UserTest(id: Long,tuiId: String, name: String, lastName: String, rut: String, career: String) extends BaseEntity{
+case class TuiRut(id: Long,tuiId: String, rut: String) extends BaseEntity{
   override def toJson=
     Json.toJson(this)
 }

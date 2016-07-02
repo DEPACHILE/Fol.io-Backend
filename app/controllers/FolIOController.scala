@@ -68,14 +68,14 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
     userDAO.byRut(rut).flatMap{
       case Some(user) => {
         println(user.toString())
-        voteAsync(user.tuiId, senderId, eventId, folio)
+        voteAsync("0", senderId, eventId, folio)
       }
       case _ => Future(Ok(""))
     }
   }
 
   def addUser(tuiId: String, name: String, lastName: String, rut: String, career: String) = Action { //test
-    userDAO.insert(UserTest(0, tuiId, name, lastName, rut, career))
+    userDAO.insert(UserTest(0, name, rut, career))
     Ok("user redi")
   }
 

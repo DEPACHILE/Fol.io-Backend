@@ -2,120 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0204efc1-61cb-4b4c-b42e-69adc6f600a7" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\.sbtserver\connections\activator-859d0343-8392-4141-8ceb-f0deb0151b7e.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\.sbtserver\connections\activator-b66d0eaa-9309-4f5a-be67-461ae33d09ad.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\.sbtserver\connections\play-fork-run-24a5487b-662e-4c50-a8f5-ccee537ccdcc.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\.sbtserver\connections\play-fork-run-4987306f-9522-4754-be30-8f8ef9a5a0df.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\.sbtserver\connections\play-fork-run-ec478ef0-56ec-4033-8fc8-e1308b512411.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\.sbtserver\connections\play-fork-run-f7131892-7dd1-4d2b-84fd-4598d95a3a46.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\controllers\FolIOController$$anonfun$getUsers$1$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\models\daos\ParticipationDAO$$anonfun$add$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\models\daos\ParticipationDAO$$anonfun$add$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\models\daos\ParticipationDAO$$anonfun$add$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Nicolas\Documents\Fol.io-Backend\target\scala-2.11\classes\router\Routes$$anonfun$router$Routes$$controllers_FolIOController_addUser1_invoker$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers$$anonfun$receive$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers$$anonfun$receive$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers$$anonfun$vote$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers$$anonfun$vote$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers$$anonfun$vote$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers$$anonfun$vote$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorDBUsers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorNode$$anonfun$receive$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorNode$$anonfun$receive$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorNode.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actors/ActorNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$deleteById$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$deleteById$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$findById$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$findById$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$insert$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$insert$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$insert$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$insert$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$insert$6.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$insert$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$4$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$4$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO$$anonfun$update$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/BaseDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$addUser$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$addUser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$getUsers$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$getUsers$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$sendVote$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$sendVote$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$vote$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController$$anonfun$vote$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/FolIOController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/messages/MessagesActors$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/messages/MessagesActors$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/messages/MessagesActors.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/messages/MessagesActors.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO$$anonfun$byCareer$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO$$anonfun$byCareer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO$$anonfun$byId$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO$$anonfun$byId$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO$$anonfun$byTuiId$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO$$anonfun$byTuiId$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/ParticipationDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/ReverseFolIOController.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/ReverseFolIOController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/javascript/ReverseFolIOController.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/controllers/javascript/ReverseFolIOController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$documentation$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$documentation$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$router$Routes$$controllers_FolIOController_vote0_invoker$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$router$Routes$$controllers_FolIOController_vote0_invoker$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1$$anonfun$applyOrElse$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes$$anonfun$routes$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/router/Routes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$byCareer$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$byCareer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$byId$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$byId$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$byTuiId$2.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$byTuiId$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$insert$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO$$anonfun$insert$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/models/daos/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" afterPath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/.sbtserver" afterPath="$PROJECT_DIR$/project/.sbtserver" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/actors/ActorDBUsers.scala" afterPath="$PROJECT_DIR$/app/actors/ActorDBUsers.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/actors/ActorNode.scala" afterPath="$PROJECT_DIR$/app/actors/ActorNode.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/daos/BaseDAO.scala" afterPath="$PROJECT_DIR$/app/models/daos/BaseDAO.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/entities/FolIO.scala" afterPath="$PROJECT_DIR$/app/models/entities/FolIO.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/FolIOController.scala" afterPath="$PROJECT_DIR$/app/controllers/FolIOController.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/messages/MessagesActors.scala" afterPath="$PROJECT_DIR$/app/messages/MessagesActors.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RUNNING_PID" afterPath="$PROJECT_DIR$/RUNNING_PID" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/ReverseRoutes.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/Routes.scala" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/Routes.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/RoutesPrefix.scala" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/router/RoutesPrefix.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.11" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sbtserver/master.log" afterPath="$PROJECT_DIR$/.sbtserver/master.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/persistence/SlickTables.scala" afterPath="$PROJECT_DIR$/app/models/persistence/SlickTables.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sbtserver/connections/master.log" afterPath="$PROJECT_DIR$/.sbtserver/connections/master.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/compilerReporter/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/compilerReporter/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/play2_project_settings.xml" afterPath="$PROJECT_DIR$/.idea/play2_project_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sbtserver/previous.log" afterPath="$PROJECT_DIR$/.sbtserver/previous.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/routes.java" afterPath="$PROJECT_DIR$/target/scala-2.11/routes/main/controllers/routes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/routes" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,20 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FolIOController.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FolIOController.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/FolIOController.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.6561798">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13370787">
+            <state vertical-scroll-proportion="0.0">
               <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
@@ -199,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/entities/FolIO.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -229,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/persistence/SlickTables.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -239,10 +130,12 @@
         <entry file="file://$PROJECT_DIR$/app/models/daos/BaseDAO.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+              <caret line="125" column="6" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
               <folding>
                 <element signature="e#657#685#0" expanded="true" />
                 <element signature="e#1296#1324#0" expanded="true" />
+                <element signature="e#2702#2730#0" expanded="true" />
+                <element signature="e#3492#3520#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -306,14 +199,14 @@
         <option value="$PROJECT_DIR$/app/Module.scala" />
         <option value="$PROJECT_DIR$/app/messages/responses/ok/OKContent.scala" />
         <option value="$PROJECT_DIR$/app/models/entities/BaseEntity.scala" />
-        <option value="$PROJECT_DIR$/app/models/entities/FolIO.scala" />
-        <option value="$PROJECT_DIR$/app/models/persistence/SlickTables.scala" />
         <option value="$PROJECT_DIR$/app/messages/MessagesActors.scala" />
-        <option value="$PROJECT_DIR$/app/models/daos/BaseDAO.scala" />
         <option value="$PROJECT_DIR$/app/actors/ActorNode.scala" />
-        <option value="$PROJECT_DIR$/app/controllers/FolIOController.scala" />
         <option value="$PROJECT_DIR$/app/actors/ActorDBUsers.scala" />
         <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/models/persistence/SlickTables.scala" />
+        <option value="$PROJECT_DIR$/app/models/daos/BaseDAO.scala" />
+        <option value="$PROJECT_DIR$/app/controllers/FolIOController.scala" />
+        <option value="$PROJECT_DIR$/app/models/entities/FolIO.scala" />
       </list>
     </option>
   </component>
@@ -1079,15 +972,15 @@
       <workItem from="1467173035604" duration="4742000" />
       <workItem from="1467229474218" duration="8890000" />
       <workItem from="1467342065573" duration="8160000" />
-      <workItem from="1467405131982" duration="6273000" />
+      <workItem from="1467405131982" duration="9253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142680000" />
+    <option name="totallyTimeSpent" value="145660000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1194,6 +1087,8 @@
           <folding>
             <element signature="e#657#685#0" expanded="true" />
             <element signature="e#1296#1324#0" expanded="true" />
+            <element signature="e#2702#2730#0" expanded="true" />
+            <element signature="e#3492#3520#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1275,6 +1170,8 @@
           <folding>
             <element signature="e#657#685#0" expanded="true" />
             <element signature="e#1296#1324#0" expanded="true" />
+            <element signature="e#2702#2730#0" expanded="true" />
+            <element signature="e#3492#3520#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1462,14 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/entities/BaseEntity.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/messages/responses/Response.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1482,41 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/entities/FolIO.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/persistence/SlickTables.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/daos/BaseDAO.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding>
-            <element signature="e#657#685#0" expanded="true" />
-            <element signature="e#1296#1324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/FolIOController.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1539,8 +1393,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13370787">
+        <state vertical-scroll-proportion="0.0">
           <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/persistence/SlickTables.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/entities/BaseEntity.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/daos/BaseDAO.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="6" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
+          <folding>
+            <element signature="e#657#685#0" expanded="true" />
+            <element signature="e#1296#1324#0" expanded="true" />
+            <element signature="e#2702#2730#0" expanded="true" />
+            <element signature="e#3492#3520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/entities/FolIO.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/FolIOController.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6561798">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
           <folding />
         </state>
       </provider>

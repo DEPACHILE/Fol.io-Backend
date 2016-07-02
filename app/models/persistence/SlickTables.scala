@@ -53,15 +53,22 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
 
 
   class UserTable(tag: Tag) extends BaseTable[UserTest](tag, "user_test"){
-    def tuiId= column[String]("tui_id")
-    def name = column[String]("name")
-    def lastName = column[String]("last_name")
     def rut = column[String]("rut")
+    def name = column[String]("name")
     def career = column[String]("career")
 
-    def * = (id, tuiId,name, lastName, rut,career) <> ((UserTest.apply _).tupled, UserTest.unapply)
+    def * = (id,name, rut,career) <> ((UserTest.apply _).tupled, UserTest.unapply)
   }
   val userQ = TableQuery[UserTable]
+
+
+  class TuiRutTable(tag: Tag) extends BaseTable[TuiRut](tag, "tui_rut"){
+    def tuiId= column[String]("tui_id")
+    def rut = column[String]("rut")
+
+    def * = (id, tuiId,rut) <> ((TuiRut.apply _).tupled, TuiRut.unapply)
+  }
+  val tuiRutQ = TableQuery[TuiRutTable]
 }
 
 

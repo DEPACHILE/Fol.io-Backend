@@ -62,11 +62,11 @@ class ParticipationDAO @Inject()(protected val dbConfigProvider: DatabaseConfigP
   def insert(obj: Participation): Future[Long] = {
     db.run(tableQ returning tableQ.map(_.id) += obj)
   }
-  /*def add(obj: Participation): Future[String] = {
+  def add(obj: Participation): Future[String] = {
     dbConfig.db.run(tableQ returning tableQ.map(_.id) += obj).map(res => "User successfully added").recover {
       case ex: Exception => ex.getCause.getMessage
     }
-  }*/
+  }
   def deleteAll(): Future[Int] = {
     db.run(tableQ.delete)
   }
@@ -120,11 +120,34 @@ class UserDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) 
   def byCareer(career: String, eventId: Long): Future[Seq[UserTest]] = {
     db.run(tableQ.filter( x=> {x.career === career}).result)
   }
-  def byTuiId(tuiId: String): Future[Option[UserTest]] = {
-    db.run(tableQ.filter(_.tuiId === tuiId).result.headOption)
-  }
 }
 
+@Singleton
+class TuiRutDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) {
+  val dbConfig = dbConfigProvider.get[JdbcProfile]
+
+  import dbConfig.driver.api._
+  import dbConfig.db
+
+  protected val tableQ = SlickTables.tuiRutQ
+
+  def all: Future[Seq[TuiRut]] = {
+    db.run(tableQ.result)
+  }
+
+  def insert(obj: TuiRut): Future[Long] = {
+    db.run(tableQ returning tableQ.map(_.id) += obj)
+  }
+
+
+  def byId(id: Long): Future[Option[TuiRut]] = {
+    db.run(tableQ.filter(_.id === id).result.headOption)
+  }
+
+  def byRut(rut: String): Future[Option[TuiRut]] = {
+    db.run(tableQ.filter(_.rut === rut).result.headOption)
+  }
+}
 
 
 
@@ -208,8 +231,8 @@ abstract class BaseDAO[T <: BaseTable[A], A <: BaseEntity]() extends AbstractBas
   def deleteByFilter[C : CanBeQueryCondition](f:  (T) => C): Future[Int] = {
     db.run(tableQ.withFilter(f).delete)
   }
-  def deleteAll(): Future[Int] = {
-    db.run(tableQ.delete)
+  def deleteByFilter[C : CanBeQueryCondition](f:  (T) => C): Future[Int] = {
+    db.run(tableQ.withFilter(f).delete)
   }
 
 }
