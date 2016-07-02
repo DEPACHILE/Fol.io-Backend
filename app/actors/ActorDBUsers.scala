@@ -64,7 +64,8 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
   // falta arreglar weas aca
 
   def vote(v: VoteWithFolio, sender: ActorRef, user: UserTest)={
-    println("voting")
+    val tui = v.tuiId
+    println(s"voting2 $tui")
     participationDAO.byTuiId(v.tuiId).map {
 
     case Some(va) =>  {
@@ -91,7 +92,7 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
       Await.result(vote(v,newSender,userContainer.get), 1000 millis)
     }
     else{
-      sender ! ErrorResponse(ErrorContent("Usuario no existe"))
+      sender ! Json.toJson(ErrorResponse(ErrorContent("Usuario no existe")))
     }
 
   }
@@ -99,7 +100,7 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
   def receive = {
 
     case v: VoteWithFolio => {
-      println("voting")
+      println(s"voting $v")
       voteUser(v)
 
     }

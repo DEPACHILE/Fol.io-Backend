@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Nicolas/Documents/Fol.io-Backend/conf/routes
-// @DATE:Wed Jun 29 16:46:46 CLT 2016
+// @DATE:Fri Jul 01 19:13:17 CLT 2016
 
 
 package router {

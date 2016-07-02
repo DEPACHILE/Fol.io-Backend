@@ -30,7 +30,7 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
   import Actor._
 
 
-  implicit val timeout: Timeout = 200.seconds
+  implicit val timeout: Timeout = 20.seconds
 
   println(self.path)
 
@@ -57,6 +57,20 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
       }else{
         sender ! Json.toJson(ErrorResponse(ErrorContent("Persona ya voto")))
       }
+    }
+    case v: VoteWithoutFolio => {
+      if(Await.result(checkParticipation(v.tuiId), 1000 millis)){
+        val newSender = sender();
+        (system.actorSelection("/user/actorUsers") ? v).mapTo[JsValue].map { message =>
+          println(message)
+          print(newSender)
+          newSender ! message
+        }
+
+      }else{
+        sender ! Json.toJson(ErrorResponse(ErrorContent("Persona ya voto")))
+      }
+
     }
     case _ => {
       println(self.path)

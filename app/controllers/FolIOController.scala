@@ -6,6 +6,7 @@ import javax.inject._
 import messages.MessagesActors
 import MessagesActors.VoteWithFolio
 import actors.{ActorDBUsers, ActorNode}
+import messages.responses.error.{ErrorContent, ErrorResponse}
 import models.daos.{UserDAO, EventDAO, ParticipationDAO}
 import models.entities._
 import play.api.data.Forms._
@@ -17,7 +18,7 @@ import play.api.libs.json.{Json, Writes, JsValue}
 import play.api.mvc._
 import akka.actor._
 
-import scala.concurrent.ExecutionContext
+import scala.concurrent.{Future, ExecutionContext}
 import MessagesActors._
 
 
@@ -33,7 +34,7 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
   //Implicits
 
 
-  implicit val timeout: Timeout = 100.seconds
+  implicit val timeout: Timeout = 10.seconds
 
 
   //Actor database
@@ -41,7 +42,7 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
 
   //implicit val timeout: Timeout =5.seconds
 
-  def sendVote(v: Vote) = {
+  def sendVote(v: Vote):Future[Result]= {
     val senderId = v.senderId
     (system.actorSelection(s"/user/actorUsers/$senderId") ? v).mapTo[JsValue].map { message =>
       Ok(message)
@@ -49,12 +50,27 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
   }
 
   def vote(tuiId: String, senderId: Long, eventId: Long, folio: Long = -1) = Action.async {
+   voteAsync(tuiId,senderId,eventId,folio)
+  }
+  def voteAsync(tuiId: String, senderId: Long, eventId: Long, folio: Long = -1):Future[Result] =
     folio match {
       case -1 =>
         sendVote(VoteWithoutFolio(tuiId, "$a", eventId))
       case _ =>
         sendVote(VoteWithFolio(tuiId, "$a", eventId, folio))
+    }
 
+  def voteUser(user: UserTest):Result = {
+    Ok("")
+  }
+
+  def voteRut(rut: String, senderId: Long, eventId: Long, folio: Long = -1) = Action.async { implicit request =>
+    userDAO.byRut(rut).flatMap{
+      case Some(user) => {
+        println(user.toString())
+        voteAsync(user.tuiId, senderId, eventId, folio)
+      }
+      case _ => Future(Ok(""))
     }
   }
 
@@ -67,5 +83,10 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
     println("rooms")
     userDAO.all.map{ rooms =>
       Ok(Json.toJson(rooms.toString))
+    }  }
+  def deleteAll =Action.async{ implicit request =>
+    println("rooms")
+    participationDAO.deleteAll().map{ rooms =>
+      Ok(Json.toJson("Ok"))
     }  }
 }

@@ -13,13 +13,14 @@ object MessagesActors {
 
   case class VoteWithoutFolio(tuiId: String,senderId: String, eventId:Long ) extends Vote
   case class VoteWithFolio(tuiId: String,senderId: String, eventId:Long,folio: Long) extends Vote
-
+  case class VoteRut(rut: String,senderId: String, eventId:Long,folio: Long)
   case class CanVote(tuiId: Long, name: String, lastName: String, career:String) extends MessageOk
   case class VoteReady() extends MessageOk
   trait vError{
     def error:String
   }
   case class VoteError(error:String) extends vError
+
 
 }
 

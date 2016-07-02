@@ -5,8 +5,13 @@
 # An example controller showing how to write asynchronous code
 
 
-GET /vote/:eventId/:sender/:tuiId/:folio               controllers.FolIOController.vote(tuiId: String,sender: Long, eventId: Long, folio: Long)
+GET /vote/:eventId/:sender/:tuiId/:folio/               controllers.FolIOController.vote(tuiId: String,sender: Long, eventId: Long, folio: Long)
+GET /vote/:eventId/:sender/:tuiId/      controllers.FolIOController.vote(tuiId: String,sender: Long, eventId: Long, folio: Long = -1)
+GET /voteRut/:eventId/:sender/:rut/      controllers.FolIOController.voteRut(rut: String,sender: Long, eventId: Long, folio: Long = -1)
+GET /voteRut/:eventId/:sender/:rut/:folio/ controllers.FolIOController.voteRut(rut: String,sender: Long, eventId: Long, folio: Long)
 # Map static resources from the /public folder to the /assets URL path
 
 
 GET /addUser/:tuiId/:name/:lastName/:rut/:career  controllers.FolIOController.addUser(tuiId:String, name : String, lastName: String, rut: String, career: String)
+
+GET /deleteAll  controllers.FolIOController.deleteAll()
