@@ -1,3 +1,10 @@
 [warn] C:\Users\Nicolas\Documents\Fol.io-Backend\conf\routes:9: unreachable code
-[warn] GET /vote/:eventId/:sender/:tuiId/      controllers.FolIOController.vote(tuiId: String,sender: Long, eventId: Long, folio: Long = -1)
-[warn] one warning found
+[warn] GET /voteTui/:eventId/:sender/:tuiId/      controllers.FolIOController.voteTui(tuiId: String,sender: Long, eventId: Long, folio: Long = -1)
+[warn] C:\Users\Nicolas\Documents\Fol.io-Backend\app\models\daos\BaseDAO.scala:197: method current in object Play is deprecated: This is a static reference to application, use DI instead
+[warn]   protected lazy val dbConfig: DatabaseConfig[JdbcProfile] = DatabaseConfigProvider.get[JdbcProfile](Play.current)
+[warn]                                                                                                           ^
+[warn] C:\Users\Nicolas\Documents\Fol.io-Backend\app\models\persistence\SlickTables.scala:15: method current in object Play is deprecated: This is a static reference to application, use DI instead
+[warn]   protected lazy val dbConfig = DatabaseConfigProvider.get[JdbcProfile](Play.current)
+[warn]                                                                              ^
+[warn] there were four feature warnings; re-run with -feature for details
+[warn] four warnings found

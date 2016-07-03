@@ -24,7 +24,8 @@
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
-              <option name="confDir" value="C:\Users\Nicolas\Documents\ScalaRamo\chat\app" />
+              <option name="sourceDir" value="C:\Users\Nicolas\Documents\ScalaRamo\chat\app" />
+              <option name="confDir" value="C:\Users\Nicolas\Documents\Fol.io-Backend\app" />
               <option name="templateImports">
                 <list>
                   <option value="models._" />
@@ -41,14 +42,14 @@
                   <option value="controllers.Assets.Asset" />
                 </list>
               </option>
-              <option name="uri" value="C:\Users\Nicolas\Documents\ScalaRamo\chat" />
+              <option name="uri" value="C:\Users\Nicolas\Documents\Fol.io-Backend" />
             </ProjectSettingsEntry>
           </value>
         </entry>
         <entry key="sourceDirectory">
           <value>
             <ProjectSettingsEntry>
-              <option name="confDir" value="$PROJECT_DIR$/app" />
+              <option name="sourceDir" value="$PROJECT_DIR$/app" />
             </ProjectSettingsEntry>
           </value>
         </entry>

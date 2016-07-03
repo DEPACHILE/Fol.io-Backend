@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Nicolas/Documents/Fol.io-Backend/conf/routes
-// @DATE:Fri Jul 01 19:13:17 CLT 2016
+// @DATE:Sun Jul 03 15:42:18 CLT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -61,13 +61,13 @@ package controllers.javascript {
     )
   
     // @LINE:8
-    def vote: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.FolIOController.vote",
+    def voteTui: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.FolIOController.voteTui",
       """
         function(tuiId0,sender1,eventId2,folio3) {
         
           if (true) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "vote/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("eventId", eventId2) + "/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("sender", sender1) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("tuiId", encodeURIComponent(tuiId0)) + "/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("folio", folio3) + "/"})
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "voteTui/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("eventId", eventId2) + "/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("sender", sender1) + "/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("tuiId", encodeURIComponent(tuiId0)) + "/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("folio", folio3) + "/"})
           }
         
         }

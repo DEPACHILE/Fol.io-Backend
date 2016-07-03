@@ -7,7 +7,7 @@ import messages.MessagesActors
 import MessagesActors.VoteWithFolio
 import actors.{ActorDBUsers, ActorNode}
 import messages.responses.error.{ErrorContent, ErrorResponse}
-import models.daos.{UserDAO, EventDAO, ParticipationDAO}
+import models.daos.{TuiRutDAO, UserDAO, EventDAO, ParticipationDAO}
 import models.entities._
 import play.api.data.Forms._
 import play.api.data._
@@ -24,7 +24,7 @@ import MessagesActors._
 
 
 @Singleton
-class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: ParticipationDAO, userDAO: UserDAO)(implicit ec: ExecutionContext, system: ActorSystem, mat: akka.stream.Materializer) extends Controller {
+class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: ParticipationDAO, userDAO: UserDAO,tuiRutDAO: TuiRutDAO)(implicit ec: ExecutionContext, system: ActorSystem, mat: akka.stream.Materializer) extends Controller {
 
   import akka.pattern.ask
   import scala.concurrent.duration._
@@ -42,33 +42,30 @@ class FolIOController @Inject()(eventDAO: EventDAO, participationDAO: Participat
 
   //implicit val timeout: Timeout =5.seconds
 
-  def sendVote(v: Vote):Future[Result]= {
+  private def sendVote(v: Vote):Future[Result]= {
     val senderId = v.senderId
     (system.actorSelection(s"/user/actorUsers/$senderId") ? v).mapTo[JsValue].map { message =>
       Ok(message)
     }
   }
 
-  def vote(tuiId: String, senderId: Long, eventId: Long, folio: Long = -1) = Action.async {
+ /* def vote(tuiId: String, senderId: Long, eventId: Long, folio: Long = -1) = Action.async {
    voteAsync(tuiId,senderId,eventId,folio)
-  }
-  def voteAsync(tuiId: String, senderId: Long, eventId: Long, folio: Long = -1):Future[Result] =
+  }*/
+  private def vote(rut: String, senderId: Long, eventId: Long, folio: Long = -1,tuiId: String = "0"):Future[Result] =
     folio match {
       case -1 =>
-        sendVote(VoteWithoutFolio(tuiId, "$a", eventId))
+        sendVote(VoteWithoutFolio(rut, "$a", eventId,tuiId))
       case _ =>
-        sendVote(VoteWithFolio(tuiId, "$a", eventId, folio))
+        sendVote(VoteWithFolio(rut, "$a", eventId, folio,tuiId))
     }
-
-  def voteUser(user: UserTest):Result = {
-    Ok("")
-  }
-
   def voteRut(rut: String, senderId: Long, eventId: Long, folio: Long = -1) = Action.async { implicit request =>
-    userDAO.byRut(rut).flatMap{
-      case Some(user) => {
-        println(user.toString())
-        voteAsync("0", senderId, eventId, folio)
+        vote(rut, senderId, eventId, folio)
+  }
+  def voteTui(tuiId: String, senderId: Long, eventId: Long, folio: Long = -1) = Action.async { implicit request =>
+    tuiRutDAO.byTuiId(tuiId).flatMap{
+      case Some(tuiRut) => {
+        vote(tuiRut.rut, senderId, eventId, folio,tuiId)
       }
       case _ => Future(Ok(""))
     }

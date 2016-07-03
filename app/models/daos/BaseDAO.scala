@@ -70,7 +70,9 @@ class ParticipationDAO @Inject()(protected val dbConfigProvider: DatabaseConfigP
   def deleteAll(): Future[Int] = {
     db.run(tableQ.delete)
   }
-
+  def byRut(rut: String): Future[Option[Participation]] = {
+    db.run(tableQ.filter(_.rut === rut).result.headOption)
+  }
 
   def byId(id: Long): Future[Option[Participation]] = {
     db.run(tableQ.filter(_.id === id).result.headOption)
@@ -124,13 +126,17 @@ class UserDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) 
 
 @Singleton
 class TuiRutDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) {
+
+
   val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig.driver.api._
   import dbConfig.db
 
   protected val tableQ = SlickTables.tuiRutQ
-
+  def byTuiId(tuiId: String): Future[Option[TuiRut]] = {
+    db.run(tableQ.filter(_.tuiId === tuiId).result.headOption)
+  }
   def all: Future[Seq[TuiRut]] = {
     db.run(tableQ.result)
   }
@@ -228,9 +234,6 @@ abstract class BaseDAO[T <: BaseTable[A], A <: BaseEntity]() extends AbstractBas
     db.run(tableQ.filter(_.id.inSet(ids)).delete)
   }
 
-  def deleteByFilter[C : CanBeQueryCondition](f:  (T) => C): Future[Int] = {
-    db.run(tableQ.withFilter(f).delete)
-  }
   def deleteByFilter[C : CanBeQueryCondition](f:  (T) => C): Future[Int] = {
     db.run(tableQ.withFilter(f).delete)
   }

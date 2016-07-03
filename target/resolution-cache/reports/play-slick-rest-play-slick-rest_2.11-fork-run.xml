@@ -7,7 +7,7 @@
 		revision="0.0.1"
 		conf="fork-run"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, fork-run"
-		date="20160629164645"/>
+		date="20160703161823"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="fork-run_2.11">
 			<revision name="2.5.0" status="release" pubdate="20160303130513" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">

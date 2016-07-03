@@ -5,14 +5,15 @@ package messages
  */
 object MessagesActors {
   trait Vote{
-    def tuiId: String
+    def rut: String
     def senderId: String
     def eventId: Long
+    def tuiId: String
   }
   trait MessageOk
 
-  case class VoteWithoutFolio(tuiId: String,senderId: String, eventId:Long ) extends Vote
-  case class VoteWithFolio(tuiId: String,senderId: String, eventId:Long,folio: Long) extends Vote
+  case class VoteWithoutFolio(rut: String,senderId: String, eventId:Long, tuiId: String = "0") extends Vote
+  case class VoteWithFolio(rut: String,senderId: String, eventId:Long,folio: Long, tuiId: String = "0") extends Vote
   case class VoteRut(rut: String,senderId: String, eventId:Long,folio: Long)
   case class CanVote(tuiId: Long, name: String, lastName: String, career:String) extends MessageOk
   case class VoteReady() extends MessageOk

@@ -37,7 +37,7 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
 
 
 
-  def checkParticipation(tuiId: String)={ participationDAO.byTuiId(tuiId).flatMap{
+  def checkParticipation(rut: String)={ participationDAO.byRut(rut).flatMap{
     case Some(room) => Future(false)
 
     case _ => Future(true)
@@ -46,7 +46,7 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
   def receive = {
 
     case v: VoteWithFolio => {
-      if(Await.result(checkParticipation(v.tuiId), 1000 millis)){
+      if(Await.result(checkParticipation(v.rut), 1000 millis)){
         val newSender = sender();
         (system.actorSelection("/user/actorUsers") ? v).mapTo[JsValue].map { message =>
           println(message)
@@ -59,7 +59,7 @@ class ActorNode(participationDAO: ParticipationDAO, eventDAO : EventDAO) extends
       }
     }
     case v: VoteWithoutFolio => {
-      if(Await.result(checkParticipation(v.tuiId), 1000 millis)){
+      if(Await.result(checkParticipation(v.rut), 1000 millis)){
         val newSender = sender();
         (system.actorSelection("/user/actorUsers") ? v).mapTo[JsValue].map { message =>
           println(message)

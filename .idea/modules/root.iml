@@ -26,6 +26,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.11/twirl/test" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/test-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/universal" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/web" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -127,7 +128,6 @@
     <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.1:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.2:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.scala-sbt:test-interface:1.0:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-stm:scala-stm_2.11:0.7:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.scalatest:scalatest_2.11:2.2.6:jar" level="project" />
@@ -154,5 +154,7 @@
     <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.4.01:jar" level="project" />
     <orderEntry type="library" name="SBT: io.netty:netty-transport-native-epoll:4.0.33.Final:linux-x86_64:jar" level="project" />
     <orderEntry type="library" name="SBT: org.postgresql:postgresql:9.4-1201-jdbc41:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.scala-lang:scala-compiler:2.11.7:jar" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.4:jar" level="project" />
   </component>
 </module>

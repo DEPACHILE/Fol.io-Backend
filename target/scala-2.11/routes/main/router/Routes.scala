@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Nicolas/Documents/Fol.io-Backend/conf/routes
-// @DATE:Fri Jul 01 19:13:17 CLT 2016
+// @DATE:Sun Jul 03 15:42:18 CLT 2016
 
 package router
 
@@ -38,8 +38,8 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """vote/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/""" + "$" + """folio<[^/]+>/""", """controllers.FolIOController.vote(tuiId:String, sender:Long, eventId:Long, folio:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """vote/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/""", """controllers.FolIOController.vote(tuiId:String, sender:Long, eventId:Long, folio:Long = -1)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """voteTui/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/""" + "$" + """folio<[^/]+>/""", """controllers.FolIOController.voteTui(tuiId:String, sender:Long, eventId:Long, folio:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """voteTui/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/""", """controllers.FolIOController.voteTui(tuiId:String, sender:Long, eventId:Long, folio:Long = -1)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """voteRut/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """rut<[^/]+>/""", """controllers.FolIOController.voteRut(rut:String, sender:Long, eventId:Long, folio:Long = -1)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """voteRut/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """rut<[^/]+>/""" + "$" + """folio<[^/]+>/""", """controllers.FolIOController.voteRut(rut:String, sender:Long, eventId:Long, folio:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addUser/""" + "$" + """tuiId<[^/]+>/""" + "$" + """name<[^/]+>/""" + "$" + """lastName<[^/]+>/""" + "$" + """rut<[^/]+>/""" + "$" + """career<[^/]+>""", """controllers.FolIOController.addUser(tuiId:String, name:String, lastName:String, rut:String, career:String)"""),
@@ -52,36 +52,36 @@ class Routes(
 
 
   // @LINE:8
-  private[this] lazy val controllers_FolIOController_vote0_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("vote/"), DynamicPart("eventId", """[^/]+""",true), StaticPart("/"), DynamicPart("sender", """[^/]+""",true), StaticPart("/"), DynamicPart("tuiId", """[^/]+""",true), StaticPart("/"), DynamicPart("folio", """[^/]+""",true), StaticPart("/")))
+  private[this] lazy val controllers_FolIOController_voteTui0_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("voteTui/"), DynamicPart("eventId", """[^/]+""",true), StaticPart("/"), DynamicPart("sender", """[^/]+""",true), StaticPart("/"), DynamicPart("tuiId", """[^/]+""",true), StaticPart("/"), DynamicPart("folio", """[^/]+""",true), StaticPart("/")))
   )
-  private[this] lazy val controllers_FolIOController_vote0_invoker = createInvoker(
-    FolIOController_0.vote(fakeValue[String], fakeValue[Long], fakeValue[Long], fakeValue[Long]),
+  private[this] lazy val controllers_FolIOController_voteTui0_invoker = createInvoker(
+    FolIOController_0.voteTui(fakeValue[String], fakeValue[Long], fakeValue[Long], fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FolIOController",
-      "vote",
+      "voteTui",
       Seq(classOf[String], classOf[Long], classOf[Long], classOf[Long]),
       "GET",
       """""",
-      this.prefix + """vote/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/""" + "$" + """folio<[^/]+>/"""
+      this.prefix + """voteTui/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/""" + "$" + """folio<[^/]+>/"""
     )
   )
 
   // @LINE:9
-  private[this] lazy val controllers_FolIOController_vote1_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("vote/"), DynamicPart("eventId", """[^/]+""",true), StaticPart("/"), DynamicPart("sender", """[^/]+""",true), StaticPart("/"), DynamicPart("tuiId", """[^/]+""",true), StaticPart("/")))
+  private[this] lazy val controllers_FolIOController_voteTui1_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("voteTui/"), DynamicPart("eventId", """[^/]+""",true), StaticPart("/"), DynamicPart("sender", """[^/]+""",true), StaticPart("/"), DynamicPart("tuiId", """[^/]+""",true), StaticPart("/")))
   )
-  private[this] lazy val controllers_FolIOController_vote1_invoker = createInvoker(
-    FolIOController_0.vote(fakeValue[String], fakeValue[Long], fakeValue[Long], fakeValue[Long]),
+  private[this] lazy val controllers_FolIOController_voteTui1_invoker = createInvoker(
+    FolIOController_0.voteTui(fakeValue[String], fakeValue[Long], fakeValue[Long], fakeValue[Long]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.FolIOController",
-      "vote",
+      "voteTui",
       Seq(classOf[String], classOf[Long], classOf[Long], classOf[Long]),
       "GET",
       """""",
-      this.prefix + """vote/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/"""
+      this.prefix + """voteTui/""" + "$" + """eventId<[^/]+>/""" + "$" + """sender<[^/]+>/""" + "$" + """tuiId<[^/]+>/"""
     )
   )
 
@@ -157,15 +157,15 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:8
-    case controllers_FolIOController_vote0_route(params) =>
+    case controllers_FolIOController_voteTui0_route(params) =>
       call(params.fromPath[String]("tuiId", None), params.fromPath[Long]("sender", None), params.fromPath[Long]("eventId", None), params.fromPath[Long]("folio", None)) { (tuiId, sender, eventId, folio) =>
-        controllers_FolIOController_vote0_invoker.call(FolIOController_0.vote(tuiId, sender, eventId, folio))
+        controllers_FolIOController_voteTui0_invoker.call(FolIOController_0.voteTui(tuiId, sender, eventId, folio))
       }
   
     // @LINE:9
-    case controllers_FolIOController_vote1_route(params) =>
+    case controllers_FolIOController_voteTui1_route(params) =>
       call(params.fromPath[String]("tuiId", None), params.fromPath[Long]("sender", None), params.fromPath[Long]("eventId", None), Param[Long]("folio", Right(-1))) { (tuiId, sender, eventId, folio) =>
-        controllers_FolIOController_vote1_invoker.call(FolIOController_0.vote(tuiId, sender, eventId, folio))
+        controllers_FolIOController_voteTui1_invoker.call(FolIOController_0.voteTui(tuiId, sender, eventId, folio))
       }
   
     // @LINE:10

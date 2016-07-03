@@ -44,16 +44,16 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
       sender ! rooms.toString
     }
   }
-  def getUser(sender : ActorRef,tuiId: String) = {
+  def getUser(sender : ActorRef,rut: String) = {
     println("rooms")
-    userDAO.byTuiId(tuiId).map { rooms =>
+    userDAO.byRut(rut).map { rooms =>
       println("rooms2")
       if (rooms.isDefined)      sender ! Json.toJson(OKResponse(OKContent(Seq(rooms.get))))
       else sender ! Json.toJson(OKResponse(OKContent(Seq())))
     }
   }
   def userExists(v: VoteWithFolio) ={
-    userDAO.byTuiId(v.tuiId).flatMap {
+    userDAO.byRut(v.rut).flatMap {
       case Some(va) => Future(Option(va))
       case _ =>  Future(None)
     }
@@ -64,9 +64,9 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
   // falta arreglar weas aca
 
   def vote(v: VoteWithFolio, sender: ActorRef, user: UserTest)={
-    val tui = v.tuiId
-    println(s"voting2 $tui")
-    participationDAO.byTuiId(v.tuiId).map {
+    val rut = v.rut
+    println(s"voting2 $rut")
+    participationDAO.byTuiId(v.rut).map {
 
     case Some(va) =>  {
       println("user voto")
@@ -75,7 +75,7 @@ class ActorDBUsers( userDAO: UserDAO, participationDAO: ParticipationDAO, eventD
     case _ => {
       val s = user.toString
       println(s"user no ha votado $s")
-      val participation = Participation(0,user.name,user.lastName,user.rut,1,1,user.career,"a","a",user.tuiId,v.folio,1)
+      val participation = Participation(0,user.name.split('/')(0),user.name.split('/')(1),user.rut,1,1,user.career,"a","a",v.tuiId,v.folio,1)
       participationDAO.insert(participation)
         .map{
         case _=>sender ! Json.toJson(OKResponse(OKContent(Seq(participation))))
